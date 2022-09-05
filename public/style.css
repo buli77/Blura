@@ -1,3 +1,57 @@
-* {
-    background-color: yellow;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #f1f1f1;
+}
+
+
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.container{
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.header{
+    background:  #ee5a04;
+
+}
+.search{
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 5px;
+    padding: 10px;
+    width: 200px;
+    background-color: #ffffff;
+    border: 1px black solid;
+    text-align: center;
+  }
+li {
+    line-height: 50px;
+}
+.footer{
+    background: #000;
+    color: #8a8a8a;
+    font-size: 14px;
+    padding: 60px 0 20px;
+    text-align: center;
+}
+.footer p{
+    color: #8a8a8a;
+}
+.footer h3{
+    color: #fff;
+    margin-bottom: 20px;
 }
