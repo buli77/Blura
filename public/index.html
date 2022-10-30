@@ -1,61 +1,1220 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./assets/images/logo/icon.png" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+    
     <title>Blura - sklep komputerowy</title>
 </head>
+<div class="overlay" data-overlay></div>
+
+<div class="modal" data-modal>
+  <button class="modal-close-btn" data-modal-close>
+  </button>
+  <div class="modal-close-overlay" data-modal-overlay></div>
+  <button class="toast-close-btn" data-toast-close>
+    <ion-icon name="close-outline"></ion-icon>
+  </button>
+</div>
+
+
+
 <body>
-    <div class="header">
-        <div class="container">
-            <div class="navbar">
-                 <div class="logo">
-                    <img src="logo.png" width="300px">
-                 </div>
-            </div>
+  <header>
+
+    <div class="header-main">
+
+      <div class="container">
+
+        <a href="#" class="header-logo">
+          <img src="./assets/images/logo/logo.png" alt="Blura logo" width="120" height="36">
+        </a>
+
+        <div class="header-search-container">
+
+          <input type="search" name="search" class="search-field" placeholder="Wpisz nazwę produktu">
+
+          <button class="search-btn">
+            <ion-icon name="search-outline"></ion-icon>
+          </button>
+
         </div>
+
+        <div class="header-user-actions">
+
+          <button class="action-btn">
+            <ion-icon name="person-outline"></ion-icon>
+          </button>
+
+          <button class="action-btn">
+            <ion-icon name="heart-outline"></ion-icon>
+            <span class="count">0</span>
+          </button>
+
+          <button class="action-btn">
+            <ion-icon name="bag-handle-outline"></ion-icon>
+            <span class="count">0</span>
+          </button>
+
+        </div>
+
+      </div>
+
     </div>
-    <br>
-        <div class ="search">
-            <input type="search">
-            <input type="submit" value="Szukaj">
-        </div>
-        <div class = "navigation">
-        <nav>
-            <ul>
-                <li>Komputery</li>
-                <br>
-                <li>Procesory</li>
-                <br>
-                <li>Karty Graficzne</li>
-                <br>
-                <li>Płyta Główna</li>
-                <br>
-                <li>Dyski</li>
-                <br>
-                <li>Pamięć RAM</li>
-                <br>
-                <li>Zasilacze</li>
-                <br>
-                <li>Obudowy</li>
-                <br>
-                <li>Monitory</li>
-                <br>
-                <li>Myszki</li>
-                <br>
-                <li>Klawiatury</li>
-                <br>
-                <li>Słuchawki</li>
-                <br>
-                <li>Laptopy</li>
-                <br>
+
+    <nav class="desktop-navigation-menu">
+
+      <div class="container">
+
+        <ul class="desktop-menu-category-list">
+
+          <li class="menu-category">
+            <a href="#" class="menu-title">Strona Główna</a>
+          </li>
+
+          <li class="menu-category">
+            <a href="#" class="menu-title">Kategorie</a>
+
+            <div class="dropdown-panel">
+
+              <ul class="dropdown-panel-list">
+
+                <li class="menu-title">
+                  <a href="#">Komputery</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Płyty Główne</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Procesory</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Pamięć RAM</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Dyski</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Zasilacze</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">
+                    <img src="./assets/images/komputery.png" alt="komputery" width="250"
+                      height="119">
+                  </a>
+                </li>
+
+              </ul>
+
+              <ul class="dropdown-panel-list">
+
+                <li class="menu-title">
+                  <a href="#">Smartfony i Gadżety</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Smartfony</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Sprzęt fotograficzny</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Kamery samochodowe</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Kamery sportowe</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Drony</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">
+                    <img src="./assets/images/sig.png" alt="smartfony i gadżety" width="250" height="119">
+                  </a>
+                </li>
+
+              </ul>
+
+              <ul class="dropdown-panel-list">
+
+                <li class="menu-title">
+                  <a href="#">Akcesoria</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Myszki</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Klawiatury</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Kamerki</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Mikrofony</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Smartwatche</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">
+                    <img src="./assets/images/Akcesoria.png" alt="akcesoria" width="250" height="119">
+                  </a>
+                </li>
+
+              </ul>
+
+              <ul class="dropdown-panel-list">
+
+                <li class="menu-title">
+                  <a href="#">TV i AUDIO</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Monitory</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Telewizory</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Słuchawki</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Głośniki</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Odtwarzacze wideo</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">
+                    <img src="./assets/images/tia.png" alt="telewizory i audio" width="250" height="119">
+                  </a>
+                </li>
+
+              </ul>
+
+            </div>
+          </li>
+
+          <li class="menu-category">
+            <a href="#" class="menu-title">AGD</a>
+
+            <ul class="dropdown-list">
+
+              <li class="dropdown-item">
+                <a href="#">Lodówki</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="#">Zmywarki</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="#">Okapy</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="#">Pralki</a>
+              </li>
 
             </ul>
-        </nav>
-        <div class="footer">
-            <h3>Strona powstała na zaliczenie Pracy Dyplomowej przez Krzysztofa Świec</h3>
+          </li>
+
+          <li class="menu-category">
+            <a href="#" class="menu-title">AGD MAŁE</a>
+
+            <ul class="dropdown-list">
+
+              <li class="dropdown-item">
+                <a href="#">Roboty kuchenne</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="#">Ekspresy do kawy</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="#">Odkurzacze</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="#">Blendery</a>
+              </li>
+
+            </ul>
+          </li>
+
+          <li class="menu-category">
+            <a href="#" class="menu-title">Gaming</a>
+
+            <ul class="dropdown-list">
+
+              <li class="dropdown-item">
+                <a href="#">Xbox</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="#">Playstation</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="#">Nintendo</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="#">Gry</a>
+              </li>
+
+            </ul>
+          </li>
+
+          <li class="menu-category">
+            <a href="#" class="menu-title">Sport</a>
+            <ul class="dropdown-list">
+              <li class="dropdown-item">
+                <a href="#">Rowery Elektryczne</a>
+              </li>
+              <li class="dropdown-item">
+                <a href="#">Hulajnogi Elektryczne</a>
+              </li>
+              <li class="dropdown-item">
+                <a href="#">Słuchawki sportowe</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-category">
+            <a href="#" class="menu-title">O nas</a>
+          </li>
+          <li class="menu-category">
+            <a href="#" class="menu-title">Kontakt</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    
+    <div class="mobile-bottom-navigation">
+
+      <button class="action-btn" data-mobile-menu-open-btn>
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+
+      <button class="action-btn">
+        <ion-icon name="bag-handle-outline"></ion-icon>
+
+        <span class="count">0</span>
+      </button>
+
+      <button class="action-btn">
+        <ion-icon name="home-outline"></ion-icon>
+      </button>
+
+      <button class="action-btn">
+        <ion-icon name="heart-outline"></ion-icon>
+
+        <span class="count">0</span>
+      </button>
+
+      <button class="action-btn" data-mobile-menu-open-btn>
+        <ion-icon name="grid-outline"></ion-icon>
+      </button>
+
+    </div>
+
+    <nav class="mobile-navigation-menu  has-scrollbar" data-mobile-menu>
+
+      <div class="menu-top">
+        <h2 class="menu-title">Menu</h2>
+
+        <button class="menu-close-btn" data-mobile-menu-close-btn>
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+      </div>
+
+      <ul class="mobile-menu-category-list">
+
+        <li class="menu-category">
+          <a href="#" class="menu-title">Strona Główna</a>
+        </li>
+
+        <li class="menu-category">
+
+          <button class="accordion-menu" data-accordion-btn>
+            <p class="menu-title">AGD</p>
+
+            <div>
+              <ion-icon name="add-outline" class="add-icon"></ion-icon>
+              <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+            </div>
+          </button>
+
+          <ul class="submenu-category-list" data-accordion>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">Lodówki</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">Zmywarki</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">Okapy</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">Pralki</a>
+            </li>
+
+          </ul>
+
+        </li>
+
+        <li class="menu-category">
+
+          <button class="accordion-menu" data-accordion-btn>
+            <p class="menu-title">AGD Małe</p>
+
+            <div>
+              <ion-icon name="add-outline" class="add-icon"></ion-icon>
+              <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+            </div>
+          </button>
+
+          <ul class="submenu-category-list" data-accordion>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">Roboty Kuchenne</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">Ekspresy do Kawy</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">Odkurzacze</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">Blendery</a>
+            </li>
+
+          </ul>
+
+        </li>
+
+        <li class="menu-category">
+
+          <button class="accordion-menu" data-accordion-btn>
+            <p class="menu-title">Gaming</p>
+
+            <div>
+              <ion-icon name="add-outline" class="add-icon"></ion-icon>
+              <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+            </div>
+          </button>
+
+          <ul class="submenu-category-list" data-accordion>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">Xbox</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">Playstation</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">Nintendo</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">Gry</a>
+            </li>
+
+          </ul>
+
+        </li>
+
+        <li class="menu-category">
+
+          <button class="accordion-menu" data-accordion-btn>
+            <p class="menu-title">Sport</p>
+
+            <div>
+              <ion-icon name="add-outline" class="add-icon"></ion-icon>
+              <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+            </div>
+          </button>
+
+          <ul class="submenu-category-list" data-accordion>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">Rowery Elektryczne</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">Hulajnogi Elektryczne</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">Słuchawki Sportowe</a>
+            </li>
+
+          </ul>
+
+        </li>
+
+        <li class="menu-category">
+          <a href="#" class="menu-title">O NAS</a>
+        </li>
+
+        <li class="menu-category">
+          <a href="#" class="menu-title">KONTAKT</a>
+        </li>
+
+      </ul>
+
+      
+
+  </header>
+
+
+  <main>
+
+
+    <div class="banner">
+
+      <div class="container">
+
+        <div class="slider-container has-scrollbar">
+
+          <div class="slider-item">
+            <img src="./assets/images/Banner1.png" alt="Najlepsze monitory" class="banner-img">
+          </div>
+
+          <div class="slider-item">
+            <img src="./assets/images/Baner2.png" alt="Najnowsze konsole" class="banner-img">
+          </div>
+
+          <div class="slider-item">
+            <img src="./assets/images/Baner3.png" alt="Wyprzedaż aparatów" class="banner-img">
         </div>
+      
+      </div>
+
+    </div>
+
+
+    <!--
+      - CATEGORY
+    -->
+
+    <div class="category">
+
+      <div class="container">
+
+        <div class="category-item-container has-scrollbar">
+
+          <div class="category-item">
+
+            <div class="category-img-box">
+              <img src="./assets/images/icons/computer.png" alt="Komputer" width="30">
+            </div>
+
+            <div class="category-content-box">
+
+              <div class="category-content-flex">
+                <h3 class="category-item-title">Komputery</h3>
+
+                <p class="category-item-amount">(53)</p>
+              </div>
+
+              <a href="#" class="category-btn">Pokaż wszystkie</a>
+
+            </div>
+
+          </div>
+
+          <div class="category-item">
+
+            <div class="category-img-box">
+              <img src="./assets/images/icons/laptop.png" alt="Laptop" width="30">
+            </div>
+
+            <div class="category-content-box">
+
+              <div class="category-content-flex">
+                <h3 class="category-item-title">Laptopy</h3>
+
+                <p class="category-item-amount">(58)</p>
+              </div>
+
+              <a href="#" class="category-btn">Pokaż wszystkie</a>
+
+            </div>
+
+          </div>
+
+          <div class="category-item">
+
+            <div class="category-img-box">
+              <img src="./assets/images/icons/aparat.png" alt="Aparaty" width="30">
+            </div>
+
+            <div class="category-content-box">
+
+              <div class="category-content-flex">
+                <h3 class="category-item-title">Aparaty</h3>
+
+                <p class="category-item-amount">(68)</p>
+              </div>
+
+              <a href="#" class="category-btn">Pokaż wszystkie</a>
+
+            </div>
+
+          </div>
+
+          <div class="category-item">
+
+            <div class="category-img-box">
+              <img src="./assets/images/icons/smartfon.png" alt="Smartfony" width="30">
+            </div>
+
+            <div class="category-content-box">
+
+              <div class="category-content-flex">
+                <h3 class="category-item-title">Smartfony</h3>
+
+                <p class="category-item-amount">(84)</p>
+              </div>
+
+              <a href="#" class="category-btn">Pokaż wszystkie</a>
+
+            </div>
+
+          </div>
+
+          <div class="category-item">
+
+            <div class="category-img-box">
+              <img src="./assets/images/icons/lodowka.png" alt="Lodówki" width="30">
+            </div>
+
+            <div class="category-content-box">
+
+              <div class="category-content-flex">
+                <h3 class="category-item-title">Lodówki</h3>
+
+                <p class="category-item-amount">(35)</p>
+              </div>
+
+              <a href="#" class="category-btn">Pokaż wszystkie</a>
+
+            </div>
+
+          </div>
+
+          <div class="category-item">
+
+            <div class="category-img-box">
+              <img src="./assets/images/icons/odkurzacz.png" alt="Odkurzacze" width="30">
+            </div>
+
+            <div class="category-content-box">
+
+              <div class="category-content-flex">
+                <h3 class="category-item-title">Odkurzacze</h3>
+
+                <p class="category-item-amount">(16)</p>
+              </div>
+
+              <a href="#" class="category-btn">Pokaż wszystkie</a>
+
+            </div>
+
+          </div>
+
+          <div class="category-item">
+
+            <div class="category-img-box">
+              <img src="./assets/images/icons/konsole.png" alt="Konsole do gier" width="30">
+            </div>
+
+            <div class="category-content-box">
+
+              <div class="category-content-flex">
+                <h3 class="category-item-title">Konsole do gier</h3>
+
+                <p class="category-item-amount">(27)</p>
+              </div>
+
+              <a href="#" class="category-btn">Pokaż wszystkie</a>
+
+            </div>
+
+          </div>
+
+          <div class="category-item">
+
+            <div class="category-img-box">
+              <img src="./assets/images/icons/słuchawki.png" alt="Słuchawki" width="30">
+            </div>
+
+            <div class="category-content-box">
+
+              <div class="category-content-flex">
+                <h3 class="category-item-title">Słuchawki</h3>
+
+                <p class="category-item-amount">(39)</p>
+              </div>
+
+              <a href="#" class="category-btn">Pokaż wszystkie</a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+
+
+    <!--
+      - PRODUCT
+    -->
+
+    <div class="product-container">
+
+      <div class="container">
+
+
+        <!--
+          - SIDEBAR
+        -->
+
+        <div class="sidebar  has-scrollbar" data-mobile-menu>
+
+          <div class="sidebar-category">
+
+            <div class="sidebar-top">
+              <h2 class="sidebar-title">Kategorie</h2>
+
+              <button class="sidebar-close-btn" data-mobile-menu-close-btn>
+                <ion-icon name="close-outline"></ion-icon>
+              </button>
+            </div>
+
+            <ul class="sidebar-menu-category-list">
+
+              <li class="sidebar-menu-category">
+
+                <button class="sidebar-accordion-menu" data-accordion-btn>
+
+                  <div class="menu-title-flex">
+                    <img src="./assets/images/icons/computer.png" alt="Komputery" width="20" height="20"
+                      class="menu-title-img">
+
+                    <p class="menu-title">Komputery</p>
+                  </div>
+
+                  <div>
+                    <ion-icon name="add-outline" class="add-icon"></ion-icon>
+                    <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+                  </div>
+
+                </button>
+
+                <ul class="sidebar-submenu-category-list" data-accordion>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="#" class="sidebar-submenu-title">
+                      <p class="product-name">Płyty Główne</p>
+                      <data value="300" class="stock" title="Available Stock">300</data>
+                    </a>
+                  </li>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="#" class="sidebar-submenu-title">
+                      <p class="product-name">Procesory</p>
+                      <data value="60" class="stock" title="Available Stock">60</data>
+                    </a>
+                  </li>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="#" class="sidebar-submenu-title">
+                      <p class="product-name">Pamięć RAM</p>
+                      <data value="50" class="stock" title="Available Stock">50</data>
+                    </a>
+                  </li>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="#" class="sidebar-submenu-title">
+                      <p class="product-name">Dyski</p>
+                      <data value="87" class="stock" title="Available Stock">87</data>
+                    </a>
+                  </li>
+
+                </ul>
+
+              </li>
+
+              <li class="sidebar-menu-category">
+
+                <button class="sidebar-accordion-menu" data-accordion-btn>
+
+                  <div class="menu-title-flex">
+                    <img src="./assets/images/icons/smartfon.png" alt="Smartfony i Gadżety" class="menu-title-img" width="20"
+                      height="20">
+
+                    <p class="menu-title">Smartfony i Gadżety</p>
+                  </div>
+
+                  <div>
+                    <ion-icon name="add-outline" class="add-icon"></ion-icon>
+                    <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+                  </div>
+
+                </button>
+
+                <ul class="sidebar-submenu-category-list" data-accordion>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="#" class="sidebar-submenu-title">
+                      <p class="product-name">Smartfony</p>
+                      <data value="45" class="stock" title="Available Stock">45</data>
+                    </a>
+                  </li>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="#" class="sidebar-submenu-title">
+                      <p class="product-name">Sprzęt Fotograficzny</p>
+                      <data value="75" class="stock" title="Available Stock">75</data>
+                    </a>
+                  </li>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="#" class="sidebar-submenu-title">
+                      <p class="product-name">Kamery samochodowe</p>
+                      <data value="35" class="stock" title="Available Stock">35</data>
+                    </a>
+                  </li>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="#" class="sidebar-submenu-title">
+                      <p class="product-name">Drony</p>
+                      <data value="26" class="stock" title="Available Stock">26</data>
+                    </a>
+                  </li>
+
+                </ul>
+
+              </li>
+
+              <li class="sidebar-menu-category">
+
+                <button class="sidebar-accordion-menu" data-accordion-btn>
+
+                  <div class="menu-title-flex">
+                    <img src="./assets/images/icons/kamint.png" alt="Akcesoria" class="menu-title-img" width="20"
+                      height="20">
+
+                    <p class="menu-title">Akcesoria</p>
+                  </div>
+
+                  <div>
+                    <ion-icon name="add-outline" class="add-icon"></ion-icon>
+                    <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+                  </div>
+
+                </button>
+
+                <ul class="sidebar-submenu-category-list" data-accordion>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="#" class="sidebar-submenu-title">
+                      <p class="product-name">Myszki</p>
+                      <data value="46" class="stock" title="Available Stock">46</data>
+                    </a>
+                  </li>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="#" class="sidebar-submenu-title">
+                      <p class="product-name">Klawiatury</p>
+                      <data value="73" class="stock" title="Available Stock">73</data>
+                    </a>
+                  </li>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="#" class="sidebar-submenu-title">
+                      <p class="product-name">Kamerki internetowe</p>
+                      <data value="61" class="stock" title="Available Stock">61</data>
+                    </a>
+                  </li>
+
+                </ul>
+
+              </li>
+
+              <li class="sidebar-menu-category">
+
+                <button class="sidebar-accordion-menu" data-accordion-btn>
+
+                  <div class="menu-title-flex">
+                    <img src="./assets/images/icons/słuchawki.png" alt="TV i Audio" class="menu-title-img" width="20"
+                      height="20">
+
+                    <p class="menu-title">TV i Audio</p>
+                  </div>
+
+                  <div>
+                    <ion-icon name="add-outline" class="add-icon"></ion-icon>
+                    <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+                  </div>
+
+                </button>
+
+                <ul class="sidebar-submenu-category-list" data-accordion>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="#" class="sidebar-submenu-title">
+                      <p class="product-name">Telewizory</p>
+                      <data value="12" class="stock" title="Available Stock">12</data>
+                    </a>
+                  </li>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="#" class="sidebar-submenu-title">
+                      <p class="product-name">Monitory</p>
+                      <data value="60" class="stock" title="Available Stock">60</data>
+                    </a>
+                  </li>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="#" class="sidebar-submenu-title">
+                      <p class="product-name">Słuchawki</p>
+                      <data value="50" class="stock" title="Available Stock">50</data>
+                    </a>
+                  </li>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="#" class="sidebar-submenu-title">
+                      <p class="product-name">Głośniki</p>
+                      <data value="87" class="stock" title="Available Stock">87</data>
+                    </a>
+                  </li>
+
+                </ul>
+
+              </li>
+
+              </ul>
+
+          </div>
+
+          <div class="product-showcase">
+
+            <h3 class="showcase-heading">Najlepsze produkty</h3>
+
+            <div class="showcase-wrapper">
+
+              <div class="showcase-container">
+
+                <div class="showcase">
+
+                  <a href="#" class="showcase-img-box">
+                    <img src="./assets/images/products/dron.png" alt="Dron" width="95" height="75"
+                      class="showcase-img">
+                  </a>
+
+                  <div class="showcase-content">
+
+                    <a href="#">
+                      <h4 class="showcase-title">Dron</h4>
+                    </a>
+
+                    <div class="showcase-rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                    </div>
+
+                    <div class="price-box">
+                      <p class="price">1500 zł</p>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <div class="showcase">
+
+                  <a href="#" class="showcase-img-box">
+                    <img src="./assets/images/products/lodowka.jpg" alt="Lodówka" class="showcase-img"
+                      width="75" height="100">
+                  </a>
+
+                  <div class="showcase-content">
+
+                    <a href="#">
+                      <h4 class="showcase-title">Lodówka</h4>
+                    </a>
+                    <div class="showcase-rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star-half-outline"></ion-icon>
+                    </div>
+
+                    <div class="price-box">
+                      <p class="price">850 zł</p>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <div class="showcase">
+
+                  <a href="#" class="showcase-img-box">
+                    <img src="./assets/images/products/blueyeti.png" alt="Mikrofon Blue Yeti" class="showcase-img" width="75"
+                      height="80">
+                  </a>
+
+                  <div class="showcase-content">
+
+                    <a href="#">
+                      <h4 class="showcase-title">Mikrofon Blue Yeti</h4>
+                    </a>
+                    <div class="showcase-rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star-half-outline"></ion-icon>
+                    </div>
+
+                    <div class="price-box">
+                      <p class="price">600 zł</p>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <div class="showcase">
+
+                  <a href="#" class="showcase-img-box">
+                    <img src="./assets/images/products/smartwatch.jpg" alt="Smartwatch" class="showcase-img" width="65"
+                      height="75">
+                  </a>
+
+                  <div class="showcase-content">
+
+                    <a href="#">
+                      <h4 class="showcase-title">smartwatch</h4>
+                    </a>
+                    <div class="showcase-rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                    </div>
+
+                    <div class="price-box">
+                      <p class="price">450 zł</p>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+          <div class="product-featured">
+
+            <h2 class="title">Polecane na dziś</h2>
+
+            <div class="showcase-wrapper has-scrollbar">
+
+              <div class="showcase-container">
+
+                <div class="showcase">
+                  
+                  <div class="showcase-banner">
+                    <img src="./assets/images/products/ekspres.jpg" alt="Ekspres do kawy" class="showcase-img">
+                  </div>
+
+                  <div class="showcase-content">
+                    
+                    <div class="showcase-rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star-outline"></ion-icon>
+                      <ion-icon name="star-outline"></ion-icon>
+                    </div>
+
+                    <a href="#">
+                      <h3 class="showcase-title">Ekspres do kawy</h3>
+                    </a>
+
+                    <p class="showcase-desc">
+                      Lorem ipsum dolor sit amet consectetur Lorem ipsum
+                      dolor dolor sit amet consectetur Lorem ipsum dolor
+                    </p>
+
+                    <div class="price-box">
+                      <p class="price">350 zł</p>
+
+                      <del>500 zł</del>
+                    </div>
+
+                    <button class="add-cart-btn">Dodaj do koszyka</button>
+
+                    <div class="showcase-status">
+                      <div class="wrapper">
+                        <p>
+                          Aktualnie sprzedało się: <b>20</b>
+                        </p>
+
+                        <p>
+                          Dostępnych: <b>40</b>
+                        </p>
+                      </div>
+
+                      <div class="showcase-status-bar"></div>
+                    </div>
+
+                    
+                
+
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="showcase-container">
+              
+                <div class="showcase">
+              
+                  <div class="showcase-banner">
+                    <img src="./assets/images/products/blender.jpg" alt="Blender" class="showcase-img">
+                  </div>
+              
+                  <div class="showcase-content">
+              
+                    <div class="showcase-rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star-outline"></ion-icon>
+                      <ion-icon name="star-outline"></ion-icon>
+                    </div>
+              
+                    <h3 class="showcase-title">
+                      <a href="#" class="showcase-title">Blender</a>
+                    </h3>
+              
+                    <p class="showcase-desc">
+                      Lorem ipsum dolor sit amet consectetur Lorem ipsum
+                      dolor dolor sit amet consectetur Lorem ipsum dolor
+                    </p>
+              
+                    <div class="price-box">
+                      <p class="price">100 zł</p>
+                      <del>300 zł</del>
+                    </div>
+              
+                    <button class="add-cart-btn">Dodaj do koszyka</button>
+              
+                    <div class="showcase-status">
+                      <div class="wrapper">
+                        <p>
+                          Aktualnie sprzedało się: <b>25</b>
+                        </p>
+
+                        <p>
+                          Dostępnych: <b>35</b>
+                        </p>
+                      </div>
+              
+                      <div class="showcase-status-bar"></div>
+                    </div>
+              
+              
+                  </div>
+              
+                </div>
+              
+              </div>
+
+            </div>
+
+          </div>
+
+
+
+  </div>
+  </div>
+  </div>
+    
+  </main>
+  <footer>
+    <div class='container'>
+    <div class='row'>
+        <div class='col-md-12'>
+          <h3>Strona Powstała na potrzeby Pracy Dyplomowej przez Krzysztofa Świec</h3>
+        </div>
+    </div>
+    </div>
+</footer>
+  <script src="./assets/js/script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 </body>
+
 </html>
